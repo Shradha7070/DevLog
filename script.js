@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (post) {
             document.title = `${post.title} — DevLog`;
             articleContainer.innerHTML = `
-                <header class="article-header">
+                <header class="article-header" style="transition: opacity 0.1s ease, transform 0.1s ease; transform-origin: top center;">
                     <span class="post-date">${post.date}</span>
                     <h1 class="article-title">${post.title}</h1>
                     <div class="article-meta">
@@ -127,6 +127,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <a href="index.html" class="back-link">← Back to Home</a>
             `;
+
+            // Article Header Scroll Effect
+            const articleHeader = articleContainer.querySelector('.article-header');
+            if (articleHeader) {
+                window.addEventListener('scroll', () => {
+                    const scrolled = window.scrollY;
+                    if (scrolled < 600) { // Limit effect to top of page
+                        const opacity = Math.max(0, 1 - (scrolled / 500));
+                        const scale = Math.max(0.9, 1 - (scrolled / 1500));
+                        const translateY = scrolled * 0.3; // Parallax effect
+
+                        articleHeader.style.opacity = opacity;
+                        articleHeader.style.transform = `translateY(${translateY}px) scale(${scale})`;
+                    }
+                });
+            }
         } else {
             articleContainer.innerHTML = `
                 <div style="text-align: center; padding: 4rem 0;">
