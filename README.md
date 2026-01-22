@@ -44,7 +44,7 @@ The goal of this project is to:
 
 ## 📸 Preview
 
-*(Screenshots or live demo link can be added here)*
+**[Live Demo](https://shradha7070.github.io/DevLog/)**
 
 ---
 
