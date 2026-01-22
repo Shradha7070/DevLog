@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevLog — Developer Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description"
+        content="DevLog is a clean and responsive blog web application created to share technical articles.">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">DevLog</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Articles</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <h1>Writing Code & Sharing Ideas</h1>
+            <p>Welcome to DevLog, a place where I document my journey in web development, share tutorials, and explore
+                new technologies.</p>
+        </section>
+
+        <section class="blog-grid" id="blog-grid">
+            <!-- Blog posts will be dynamically inserted here -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> DevLog. Built by Shradha.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

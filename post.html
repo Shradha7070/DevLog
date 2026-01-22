@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started with Web Development — DevLog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo">DevLog</a>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#">Articles</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <article class="article-content" id="article-container">
+            <!-- Article content will be dynamically inserted here -->
+            <div id="loading" style="text-align: center; padding: 2rem;">Loading article...</div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> DevLog. Built by Shradha.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
